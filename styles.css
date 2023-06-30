@@ -1,0 +1,250 @@
+/********** MOBILE-FIRST WORKFLOW **********/
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* CUSTOM COLOR PROPERTIES */
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+/* RESET STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* GENERAL STYLES */
+body {
+    background-color: var(--light-gray);
+    font-size: 1rem;
+    font-family: "Karla", sans-serif;
+}
+
+h1,
+h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.15rem;
+}
+
+/* CONTENT CONTAINER */
+.container {
+    width: 85%;
+    margin: 4rem auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.community,
+.subscription,
+.why-us {
+    padding: 1.5rem;
+}
+
+/* COMMUNITY SECTION */
+section.community {
+    background-color: white;
+}
+
+.community .heading {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.community .subheading {
+    color: var(--bright-yellow);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.community .description {
+    color: var(--grayish-blue);
+    line-height: 1.75;
+    font-size: 0.875rem;
+}
+
+/* SUBSCRIPTION SECTION */
+section.subscription {
+    background-color: var(--cyan);
+    color: var(--light-gray);
+}
+
+.subscription .rate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+span.price {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+span.term {
+    opacity: 0.5;
+}
+
+.button {
+    background-color: var(--bright-yellow);
+    color: var(--light-gray);
+    font-family: 'Karla', sans-serif;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0px 4px 16px 4px rgb(0, 150, 150);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* WHY US SECTION */
+section.why-us {
+    background-color: hsla(179, 62%, 43%, 85%);
+    color: var(--light-gray);
+}
+
+.why-us ul {
+    list-style-type: none;
+    color: var(--light-gray);
+    font-size: 0.9rem;
+}
+
+.why-us ul li {
+    padding: 0.15rem 0;
+    opacity: 0.75;
+}
+
+/* FOOTER */
+.attribution {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/********** RESPONSIVE DESIGN - TABLET **********/
+@media only screen and (min-width: 714px) {
+    .container {
+        max-width: 630px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .community,
+    .subscription,
+    .why-us {
+        padding: 2rem;
+    }
+
+    .community {
+        grid-column: span 2;
+    }
+
+    .community .heading {
+        font-size: 1.5rem;
+    }
+
+    .community .subheading {
+        font-size: 1.15rem;
+    }
+
+    .community .description {
+        font-size: 1rem;
+    }
+
+    .subscription {
+        grid-column: span 1;
+    }
+
+    .why-us {
+        grid-column: span 1;
+    }
+}
+
+/********** RESPONSIVE DESIGN - LAPTOP LARGE ***********/
+@media only screen and (min-width: 1440px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        max-width: 850px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .community,
+    .subscription,
+    .why-us {
+        padding: 2.5rem;
+    }
+
+    .community {
+        grid-column: span 2;
+    }
+
+    .community .heading {
+        font-size: 2rem;
+    }
+
+    .community .subheading {
+        font-size: 1.5rem;
+    }
+
+    .community .description {
+        font-size: 1.35rem;
+    }
+
+    .subscription {
+        grid-column: span 1;
+    }
+
+    span.price {
+        font-size: 3rem;
+    }
+
+    span.term {
+        font-size: 1.5rem;
+    }
+
+    .subscription-text {
+        font-size: 1.25rem;
+    }
+
+    .button {
+        font-size: 1.25rem;
+        padding: 1.25rem 0;
+    }
+
+    .why-us {
+        grid-column: span 1;
+    }
+
+    .why-us ul {
+        font-size: 1.25rem;
+    }
+}
